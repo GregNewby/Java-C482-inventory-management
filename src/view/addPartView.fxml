@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="179.0" layoutY="79.0" spacing="20.0">
+         <children>
+            <TextField fx:id="addPartId" editable="false" />
+            <TextField fx:id="addPartName" />
+            <TextField fx:id="addPartInv" />
+            <TextField fx:id="addPartPrice" />
+            <TextField fx:id="addPartMax" />
+            <TextField fx:id="machCompId" />
+         </children>
+      </VBox>
+      <TextField fx:id="addPartMin" layoutX="402.0" layoutY="261.0" />
+      <Button fx:id="addPartCancelBtn" layoutX="476.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#onClickGoToMainView" text="Cancel" />
+      <Button fx:id="addPartSaveBtn" layoutX="420.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#onClickAddPartToList" text="Save" />
+      <RadioButton fx:id="addPartInBtn" layoutX="300.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#onClickDisplayMachineID" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="addInOutTG" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="addPartOutBtn" layoutX="443.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#onClickDisplayCompanyName" text="Outsourced" toggleGroup="$addInOutTG" />
+      <Label layoutX="117.0" layoutY="22.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <VBox layoutX="66.0" layoutY="83.0" spacing="28.0">
+         <children>
+            <Label text="ID" />
+            <Label text="Name" />
+            <Label text="Inv" />
+            <Label text="Price/Cost" />
+            <Label text="Max" />
+            <Label fx:id="machCompLbl" />
+         </children>
+      </VBox>
+      <Label layoutX="360.0" layoutY="265.0" text="Min" />
+   </children>
+</AnchorPane>

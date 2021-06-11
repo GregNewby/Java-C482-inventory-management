@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="573.2" prefWidth="918.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="548.0" prefWidth="891.0" style="-fx-border-color: black;">
+               <children>
+                  <VBox layoutX="76.0" layoutY="93.0" spacing="28.0">
+                     <children>
+                        <Label text="ID" />
+                        <Label text="Name" />
+                        <Label text="Inv" />
+                        <Label text="Price/Cost" />
+                        <Label text="Max" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="160.0" layoutY="93.0" prefHeight="96.0" prefWidth="149.0" spacing="20.0">
+                     <children>
+                        <TextField fx:id="modProdId" editable="false" opacity="0.5" />
+                        <TextField fx:id="modProdName" />
+                        <TextField fx:id="modProdInv" />
+                        <TextField fx:id="modProdPrice" />
+                     </children>
+                  </VBox>
+                  <Label layoutX="127.0" layoutY="32.0" text="Modify Product">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="partsTbl" layoutX="477.0" layoutY="80.0" prefHeight="162.0" prefWidth="335.0">
+                     <columns>
+                        <TableColumn fx:id="partId" prefWidth="75.0" text="Part ID" />
+                        <TableColumn fx:id="partName" prefWidth="75.0" text="Part Name" />
+                        <TableColumn fx:id="partStock" prefWidth="92.0001220703125" text="Inventory Level" />
+                        <TableColumn fx:id="partPrice" prefWidth="91.19999999999999" text="Price per Unit" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="modProdAddBtn" layoutX="744.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#onClickAddPartToAscParts" text="Add" />
+                  <Button fx:id="modProdRemoveBtn" layoutX="647.0" layoutY="464.0" mnemonicParsing="false" onMouseClicked="#onClickRemoveAscPart" text="Remove Associated Part" />
+                  <Button fx:id="modProdSaveBtn" layoutX="647.0" layoutY="500.0" mnemonicParsing="false" onMouseClicked="#onClickModifyProd" text="Save" />
+                  <Button fx:id="modProdCancelBtn" layoutX="738.0" layoutY="500.0" mnemonicParsing="false" onMouseClicked="#onClickGoToMainView" text="Cancel" />
+                  <TextField fx:id="searchPartBar" layoutX="664.0" layoutY="34.0" onAction="#onActionPartSearch" promptText="Search Part Name or ID" />
+                  <TableView fx:id="addAscPartsTbl" layoutX="477.0" layoutY="293.0" prefHeight="162.0" prefWidth="335.0">
+                     <columns>
+                        <TableColumn fx:id="ascPartId" prefWidth="75.0" text="Part ID" />
+                        <TableColumn fx:id="ascPartName" prefWidth="75.0" text="Part Name" />
+                        <TableColumn fx:id="ascPartInv" prefWidth="90.4000244140625" text="Inventory Level" />
+                        <TableColumn fx:id="ascPartPrice" prefWidth="92.79997558593749" text="Price per Unit" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="modProdMax" layoutX="160.0" layoutY="267.0" prefHeight="26.0" prefWidth="90.0" />
+                  <TextField fx:id="modProdMin" layoutX="327.0" layoutY="267.0" prefHeight="26.0" prefWidth="90.0" />
+                  <Label layoutX="282.0" layoutY="271.0" text="Min" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
